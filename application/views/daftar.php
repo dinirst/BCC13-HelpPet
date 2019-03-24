@@ -143,6 +143,7 @@
                                                         placeholder="Kata Sandi">
                                                 </div>
                                             </div>
+                                            <input type="file" name="foto" class="form-control">
                                             <input class="ui fluid large button brown" type="submit" name="user" id="user" value="Masuk" 
                                             style="margin-top:15px;margin-bottom:20px;background-color:#cd8b62" onclick="$('.ui.dimmable .dimmer').dimmer('show')">
                                             <div style="font-size:15px">Sudah punya akun HelpPet?

@@ -38,26 +38,16 @@ class Daftar extends CI_Controller {
     	if($this->session->userdata('logged_in') == TRUE){
     		if($this->upload->do_upload('foto')){
 				if($this->admin_model->tambah_admin($this->upload->data()) == TRUE){
-					$data ['main_view'] = 'Admin/data_pengguna/data_admin';
-					$data ['penampungan'] = $this->dokter_model->get_data_dokter();
-					$this->load->view('Admin/template_admin',$data);	
+					$data ['penampungan'] = $this->user_model->get_data_penampungan();
+					redirect('Masuk');	
 	   			}else{
-	   				$data ['main_view'] = 'Admin/data_pengguna/data_admin';
-					$data ['user'] = $this->user_model->get_data_user();
-					$data ['dokter'] = $this->dokter_model->get_data_dokter();
-					$data ['admin'] = $this->admin_model->get_data_admin();
-					$this->load->view('Admin/template_admin',$data);
+					redirect('Daftar');
 				}
 			} else {
-				$data ['main_view'] = 'Admin/data_pengguna/data_user';
-				$data ['notif1'] = $this->upload->display_errors();
-				$data ['dokter'] = $this->dokter_model->get_data_dokter();
-				$data ['user'] = $this->user_model->get_data_user();
-				$this->load->view('Admin/template_admin',$data);	
-				$data ['admin'] = $this->admin_model->get_data_admin();
+				redirect('Daftar');
     		}
 		}else{
-			redirect('Masuk');
+			redirect('Daftar');
 		}
 	}
 }
