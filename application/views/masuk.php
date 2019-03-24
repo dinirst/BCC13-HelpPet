@@ -62,7 +62,7 @@
             </div>
             <div class="ui container" style="width:40%">
                 <div class="ui container">
-                    <form class="ui form" style="padding:20px">
+                    <form class="ui form" style="padding:20px" action="<?php echo base_url('Masuk/masuk');?>" method="post">
                         <div class="ui segment">
                             <div class="field" style="margin-top:20px">
                                 <div class="ui left icon input">
@@ -79,20 +79,17 @@
                             <div class="ui two column stackable grid">
                                 <div class="row">
                                     <div class="column left aligned">
-                                        <div class="ui checkbox">
+                                       <!-- <div class="ui checkbox">
                                             <input type="checkbox" name="example">
                                             <label>Ingat saya</label>
-                                        </div>
-                                    </div>
+                                        </div> -->
+                                    </div> 
                                     <div class="column right aligned">
                                         <a href="" style="color:brown">Lupa Password?</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="ui fluid large teal submit button"
-                                style="margin-top:15px;margin-bottom:20px;background-color:#cd8b62">
-                                Login
-                            </div>
+                            <input class="ui fluid large teal submit button" type="submit" name="submit" id="submit" value="Login" style="margin-top:15px;margin-bottom:20px;background-color:#cd8b62">
                             <div style="font-size:15px">Belum punya akun HelpPet?<a
                                     href="<?php echo base_url("daftar");?>" style="color:brown">
                                     Daftar</a></div>

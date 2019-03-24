@@ -61,12 +61,12 @@
 
                                 <!-- Form untuk pendaftaran user -->
                                 <div class="ui tab active" data-tab="pengguna">
-                                    <form class="ui form" style="padding:5px 40px 40px 40px">
+                                    <form class="ui form" style="padding:5px 40px 40px 40px" action="<?php echo base_url('Daftar/user');?>" method="post">
                                         <div class="ui segment" style="padding:30px">
                                             <div class="field" style="margin-top:8px">
                                                 <div class="ui left icon input">
                                                     <i class="user icon"></i>
-                                                    <input type="text" name="nama" placeholder="Nama Lengkap">
+                                                    <input type="text" name="username" placeholder="Nama Lengkap">
                                                 </div>
                                             </div>
                                             <div class="field" style="margin-top:20px">
@@ -78,7 +78,7 @@
                                             <div class="field" style="margin-top:20px">
                                                 <div class="ui left icon input">
                                                     <i class="phone icon"></i>
-                                                    <input type="text" name="nomortelp" placeholder="Nomor Telepon">
+                                                    <input type="text" name="telp" placeholder="Nomor Telepon">
                                                 </div>
                                             </div>
                                             <div class="field" style="margin-top:20px">
@@ -91,14 +91,11 @@
                                             <div class="field">
                                                 <div class="ui left icon input">
                                                     <i class="lock icon"></i>
-                                                    <input type="password" name="katasandi" placeholder="Kata Sandi">
+                                                    <input type="password" name="password" placeholder="Kata Sandi">
                                                 </div>
                                             </div>
-                                            <div class="ui fluid large button brown"
-                                                style="margin-top:15px;margin-bottom:20px;background-color:#cd8b62"
-                                                onclick="$('.ui.dimmable .dimmer').dimmer('show')">
-                                                Daftar
-                                            </div>
+                                            <input class="ui fluid large button brown" type="submit" name="user" id="user" value="Masuk" 
+                                            style="margin-top:15px;margin-bottom:20px;background-color:#cd8b62" onclick="$('.ui.dimmable .dimmer').dimmer('show')">
                                             <div style="font-size:15px">Sudah punya akun HelpPet?<a
                                                     href="<?php echo base_url("masuk");?>" style="color:brown">
                                                     Masuk</a>
@@ -109,48 +106,45 @@
 
                                 <!-- Form untuk pendaftaran penampungan hewan -->
                                 <div class="ui tab" data-tab="penampunganhewan">
-                                    <form class="ui form" style="padding:5px 40px 40px 40px">
+                                    <form class="ui form" style="padding:5px 40px 40px 40px" action="<?php echo base_url('Daftar/tampung');?>" method="post">
                                         <div class="ui segment" style="padding:30px">
                                             <div class="field" style="margin-top:8px">
                                                 <div class="ui left icon input">
                                                     <i class="user icon"></i>
-                                                    <input type="text" name="namaPenampungan"
+                                                    <input type="text" name="nm_penampungan"
                                                         placeholder="Nama Penampungan">
                                                 </div>
                                             </div>
                                             <div class="field" style="margin-top:20px">
                                                 <div class="ui left icon input">
                                                     <i class="envelope icon"></i>
-                                                    <input type="text" name="emailPenampungan"
+                                                    <input type="text" name="email"
                                                         placeholder="Alamat Email">
                                                 </div>
                                             </div>
                                             <div class="field" style="margin-top:20px">
                                                 <div class="ui left icon input">
                                                     <i class="phone icon"></i>
-                                                    <input type="text" name="nomortelpPenampungan"
+                                                    <input type="text" name="telp"
                                                         placeholder="Nomor Telepon">
                                                 </div>
                                             </div>
                                             <div class="field" style="margin-top:20px">
                                                 <div class="ui left icon input">
                                                     <i class="home icon"></i>
-                                                    <input type="text" name="alamatPenampungan"
+                                                    <input type="text" name="alamat"
                                                         placeholder="Alamat Tempat Penampungan">
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <div class="ui left icon input">
                                                     <i class="lock icon"></i>
-                                                    <input type="password" name="katasandiPenampungan"
+                                                    <input type="password" name="password"
                                                         placeholder="Kata Sandi">
                                                 </div>
                                             </div>
-                                            <div class="ui fluid large button brown"
-                                                style="margin-top:15px;margin-bottom:20px;background-color:#cd8b62"
-                                                onclick="$('.ui.dimmable .dimmer').dimmer('show')">
-                                                Daftar
-                                            </div>
+                                            <input class="ui fluid large button brown" type="submit" name="user" id="user" value="Masuk" 
+                                            style="margin-top:15px;margin-bottom:20px;background-color:#cd8b62" onclick="$('.ui.dimmable .dimmer').dimmer('show')">
                                             <div style="font-size:15px">Sudah punya akun HelpPet?
                                                 <a href="<?php echo base_url("masuk");?>" style="color:brown">
                                                     Masuk

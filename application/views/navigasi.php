@@ -159,12 +159,14 @@
                     <a class="item" href="<?php echo base_url("relawan");?>">Relawan</a>
                     <a class="item" href="<?php echo base_url("donasi");?>">Donasi</a>
                     <div class="right item">
-                        <a class="ui inverted button" style="margin-right:15px" href="<?php echo base_url("masuk");?>">
-                            Masuk
-                        </a>
-                        <a class="ui inverted button" href="<?php echo base_url("daftar");?>">
-                            Daftar
-                        </a>
+                        <?php if($this->session->userdata('logged_in') == TRUE){
+                            echo '<a class="item" href="'.base_url('Masuk/logout/').'"><span> Keluar </span></a>';
+                            echo '<a class="item" href="'.base_url('').'"><span> Info Akun </span></a>';
+                        }else{
+                            echo '<a class="item" href="'.base_url('Masuk').'"><span> Masuk </span></a> ';
+                            echo '<a class="item" href="'.base_url('Daftar').'"><span> Daftar </span></a> ';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
